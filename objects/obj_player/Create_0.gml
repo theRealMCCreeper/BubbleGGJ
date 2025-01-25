@@ -62,6 +62,7 @@ function active()
 	var h_axis = GET_KEYS[@KEY.RIGHT].down - GET_KEYS[@KEY.LEFT].down;
 	
 	var i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
+	var i_jump = GET_KEYS[@KEY.SPACE].down;
 	
 	//walking
 	hspd = h_axis * spd;
@@ -81,6 +82,10 @@ function active()
 			vspd = jump_force;
 		}
 	}
+	
+	//Variable jump
+	if(vspd < 0 && !i_jump)
+		vspd = max(vspd,jump_force / 4);
 	
 	//collision + movement
 	move_with_collisions();
