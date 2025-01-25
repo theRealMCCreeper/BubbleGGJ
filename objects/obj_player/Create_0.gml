@@ -5,6 +5,8 @@ grav = 0.4; //gravity
 jump_force = -7; //jump force
 grounded = false;
 
+collision_tile_layer = layer_tilemap_get_id("Tiles_1");
+
 enum PS //player state
 {
 	ACTIVE,
@@ -36,18 +38,18 @@ function change_state(new_state)
 function move_with_collisions()
 {
 	//horizontal
-	if(place_meeting(x+hspd, y, obj_wall))
+	if(place_meeting(x+hspd, y, collision_tile_layer))
 	{
-		while(!place_meeting(x+sign(hspd),y,obj_wall))
+		while(!place_meeting(x+sign(hspd),y,collision_tile_layer))
 			x += sign(hspd);
 		hspd = 0;
 	}
 	x += hspd;
 	
 	//vertical
-	if(place_meeting(x,y+vspd,obj_wall))
+	if(place_meeting(x,y+vspd,collision_tile_layer))
 	{
-		while(!place_meeting(x,y+sign(vspd),obj_wall))
+		while(!place_meeting(x,y+sign(vspd),collision_tile_layer))
 			y += sign(vspd);
 		vspd = 0;
 	}
@@ -66,7 +68,7 @@ function active()
 	hspd = h_axis * spd;
 	
 	//Update grounded.
-	grounded = place_meeting(x,y+1,obj_wall);
+	grounded = place_meeting(x,y+1,collision_tile_layer);
 
 	//Gravity + Jumping
 	if(!grounded)
