@@ -136,16 +136,43 @@ else
 			}
 		}
 		
+		// Menu move left with keyboard
+		if (GET_KEYS[@KEY.LEFT].pressed)
+		{
+			// Play a sound effect
+			print("reminder to put sound for menu keyboard down");
+			
+			// Go to designated key
+			if (menu_buttons.list[|menu_keyboard_target].button_left != noone)
+			{
+				menu_keyboard_target = menu_buttons.list[|menu_keyboard_target].button_left;
+			}
+		}
+		
 		// Menu move up with keyboard
 		if (GET_KEYS[@KEY.UP].pressed)
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard up");
 			
-			menu_keyboard_target = 
-					(menu_keyboard_target == 0)
-					? menu_buttons.size - 1
-					: menu_keyboard_target - 1;
+			// Go to designated key
+			if (menu_buttons.list[|menu_keyboard_target].button_up != noone)
+			{
+				menu_keyboard_target = menu_buttons.list[|menu_keyboard_target].button_up;
+			}
+		}
+		
+		// Menu move right with keyboard
+		if (GET_KEYS[@KEY.RIGHT].pressed)
+		{
+			// Play a sound effect
+			print("reminder to put sound for menu keyboard down");
+			
+			// Go to designated key
+			if (menu_buttons.list[|menu_keyboard_target].button_right != noone)
+			{
+				menu_keyboard_target = menu_buttons.list[|menu_keyboard_target].button_right;
+			}
 		}
 		
 		// Menu move down with keyboard
@@ -153,11 +180,12 @@ else
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard down");
-		
-			menu_keyboard_target = 
-					(menu_keyboard_target + 1 == menu_buttons.size)
-					? 0
-					: menu_keyboard_target + 1;
+			
+			// Go to designated key
+			if (menu_buttons.list[|menu_keyboard_target].button_down != noone)
+			{
+				menu_keyboard_target = menu_buttons.list[|menu_keyboard_target].button_down;
+			}
 		}
 	
 		// Click the selected button
