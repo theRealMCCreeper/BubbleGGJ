@@ -1,3 +1,5 @@
+// UI HANDLING SCRIPT
+
 // Handles all kinds of ui button's code on being clicked
 function ui_clicked(_id_button)
 {

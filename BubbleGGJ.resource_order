@@ -28,6 +28,7 @@
     {"name":"ui_content_obj","order":2,"path":"objects/ui_content_obj/ui_content_obj.yy",},
     {"name":"ui_manager_obj","order":3,"path":"objects/ui_manager_obj/ui_manager_obj.yy",},
     {"name":"rm_level1","order":1,"path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"general","order":1,"path":"scripts/general/general.yy",},
     {"name":"empty_spr","order":1,"path":"sprites/empty_spr/empty_spr.yy",},
     {"name":"filler_spr","order":2,"path":"sprites/filler_spr/filler_spr.yy",},
     {"name":"image_button_shape_spr","order":3,"path":"sprites/image_button_shape_spr/image_button_shape_spr.yy",},

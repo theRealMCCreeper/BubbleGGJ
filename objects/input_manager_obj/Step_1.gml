@@ -1,4 +1,4 @@
-// UI MANAGER BEGIN STEP
+// INPUT MANAGER BEGIN STEP
 
 // Set key data
 for (var _i = 0; _i < KEY.LENGTH; ++_i)

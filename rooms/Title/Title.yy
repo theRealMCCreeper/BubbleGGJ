@@ -14,10 +14,12 @@
     {"name":"inst_6F1DF3E8","path":"rooms/Title/Title.yy",},
     {"name":"inst_1DE4E1A6","path":"rooms/Title/Title.yy",},
     {"name":"inst_3BC4D1E6","path":"rooms/Title/Title.yy",},
+    {"name":"inst_451759FD","path":"rooms/Title/Title.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_451759FD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_451759FD","objectId":{"name":"input_manager_obj","path":"objects/input_manager_obj/input_manager_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":0.0,"y":32.0,},
         {"$GMRInstance":"v1","%Name":"inst_47C44C84","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47C44C84","objectId":{"name":"ui_manager_obj","path":"objects/ui_manager_obj/ui_manager_obj.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_59CABE7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_59CABE7E","objectId":{"name":"text_button_obj","path":"objects/text_button_obj/text_button_obj.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"text_string","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"THIS IS ONE",},

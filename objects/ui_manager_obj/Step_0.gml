@@ -140,7 +140,7 @@ else
 		if (GET_KEYS[@KEY.LEFT].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			general("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_left != noone)
@@ -153,7 +153,7 @@ else
 		if (GET_KEYS[@KEY.UP].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard up");
+			general("reminder to put sound for menu keyboard up");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_up != noone)
@@ -166,7 +166,7 @@ else
 		if (GET_KEYS[@KEY.RIGHT].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			general("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_right != noone)
@@ -179,7 +179,7 @@ else
 		if (GET_KEYS[@KEY.DOWN].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			general("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_down != noone)
