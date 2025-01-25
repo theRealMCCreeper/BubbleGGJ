@@ -60,9 +60,9 @@ function move_with_collisions()
 function active()
 {
 	//inputs
-	var h_axis = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+	var h_axis = GET_KEYS[@KEY.RIGHT].down - GET_KEYS[@KEY.LEFT].down;
 	
-	var i_jump_pressed = keyboard_check_pressed(vk_space);
+	var i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
 	
 	//walking
 	hspd = h_axis * spd;

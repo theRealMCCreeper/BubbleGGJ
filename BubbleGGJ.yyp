@@ -54,6 +54,7 @@
     {"id":{"name":"ui_manager_obj","path":"objects/ui_manager_obj/ui_manager_obj.yy",},},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"Title","path":"rooms/Title/Title.yy",},},
+    {"id":{"name":"general","path":"scripts/general/general.yy",},},
     {"id":{"name":"ui_clicked","path":"scripts/ui_clicked/ui_clicked.yy",},},
     {"id":{"name":"empty_spr","path":"sprites/empty_spr/empty_spr.yy",},},
     {"id":{"name":"filler_spr","path":"sprites/filler_spr/filler_spr.yy",},},
@@ -70,8 +71,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
+    {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
