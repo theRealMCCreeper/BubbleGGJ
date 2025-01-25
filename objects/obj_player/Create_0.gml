@@ -1,9 +1,8 @@
-spd = 4;
+spd = 40;
 hspd = 0; //h velocity
 vspd = 0; //v velocity
-grav = 0.4; //gravity
-jump_force = -7; //jump force
-grounded = false;
+grav = 4; //gravity
+jump_force = -96; //jump forcgrounded = false;
 
 collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 
@@ -75,9 +74,12 @@ function active()
 	{	
 		vspd += grav;
 	}
-	else if(i_jump_pressed)
-	{
-		vspd = jump_force;
+	else
+	{		
+		if(i_jump_pressed)
+		{
+			vspd = jump_force;
+		}
 	}
 	
 	//collision + movement
