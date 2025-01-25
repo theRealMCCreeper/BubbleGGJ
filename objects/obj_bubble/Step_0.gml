@@ -1,3 +1,4 @@
+//Get horizontal and vertical dir
 var hdir = 1
 if(hspd != 0)
 	hdir = sign(hspd);
@@ -39,3 +40,5 @@ if(_bubble_inst != noone)
 	bounce_bubble(_bubble_inst);
 }
 y += vspd;
+
+invince_tick -= 1;

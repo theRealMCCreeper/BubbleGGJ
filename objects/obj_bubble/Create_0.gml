@@ -5,7 +5,10 @@ min_speed = 10;
 initial_speed = 50;
 vertical_initial_speed = 10;
 
-bounce_buffer = 64;
+//bounce_buffer = 64;
+
+invince_time = game_get_speed(gamespeed_fps) * 0.5;
+invince_tick = invince_time;
 
 collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 

@@ -4,6 +4,10 @@ vspd = 0; //v velocity
 grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
+bubble_jump_force = -96;
+bubble_shoot_offset = 500;
+is_jump_variable = false; //Variable means variable jump height.
+
 dir = 1;
 
 //shooting
@@ -71,7 +75,7 @@ function shooting()
 	//shooting
 	if(GET_KEYS[@KEY.J].pressed && shoot_cooldown_tick <= 0)
 	{
-		var _bubble_inst = instance_create_depth(x, y, depth + 10, obj_bubble);
+		var _bubble_inst = instance_create_depth(x + dir * bubble_shoot_offset, y, depth + 10, obj_bubble);
 		with(_bubble_inst)
 		{
 			if(place_meeting(x,y,obj_bubble))
@@ -89,9 +93,14 @@ function shooting()
 function bubble_bouncing()
 {
 	var _bubble_inst = instance_place(x,y+vspd,obj_bubble);
-	if(_bubble_inst != noone)
+	if(_bubble_inst != noone && vspd > 0)
 	{
-		
+		vspd = bubble_jump_force;
+		is_jump_variable = false;
+		with(_bubble_inst)
+		{
+			pop();
+		}
 	}
 }
 
@@ -120,6 +129,8 @@ function active()
 		vspd += grav;
 		
 		can_jump -= 1;
+		
+		bubble_bouncing();
 	}
 	else
 	{	
@@ -129,10 +140,11 @@ function active()
 	if(can_jump > 0 && _i_jump_pressed)
 	{
 		vspd = jump_force;
+		is_jump_variable = true;
 	}
 	
 	//Variable jump
-	if(vspd < 0 && !_i_jump)
+	if(is_jump_variable && vspd < 0 && !_i_jump)
 		vspd = max(vspd,jump_force / 4);
 	
 	//collision + movement
