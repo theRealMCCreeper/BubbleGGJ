@@ -10,6 +10,10 @@ is_jump_variable = false; //Variable means variable jump height.
 
 dir = 1;
 
+//walking sound
+walk_sound_time = game_get_speed(gamespeed_fps) * 0.5;
+walk_sound_tick = 0;
+
 //shooting
 shoot_cooldown_tick = 0;
 shoot_cooldown_time = game_get_speed(gamespeed_fps);
@@ -95,13 +99,21 @@ function bubble_bouncing()
 	var _bubble_inst = instance_place(x,y+vspd,obj_bubble);
 	if(_bubble_inst != noone && vspd > 0)
 	{
-		vspd = bubble_jump_force;
-		is_jump_variable = false;
+		//vspd = bubble_jump_force;
+		//is_jump_variable = false;
+		jump(false, bubble_jump_force);
 		with(_bubble_inst)
 		{
 			pop();
 		}
 	}
+}
+
+function jump(_is_jump_variable, _force)
+{
+	vspd = _force;
+	is_jump_variable = _is_jump_variable;	
+	audio_play_sound(sfx_jump, 11, false);
 }
 
 // ---- states ----//
@@ -139,8 +151,9 @@ function active()
 	
 	if(can_jump > 0 && _i_jump_pressed)
 	{
-		vspd = jump_force;
-		is_jump_variable = true;
+		//vspd = jump_force;
+		//is_jump_variable = true;
+		jump(true, jump_force);
 	}
 	
 	//Variable jump
