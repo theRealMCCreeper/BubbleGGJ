@@ -20,5 +20,7 @@
     {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
     {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
     {"name":"obj_fullscreen","order":1,"path":"objects/obj_fullscreen/obj_fullscreen.yy",},
+    {"name":"spr_bubble","order":2,"path":"sprites/spr_bubble/spr_bubble.yy",},
+    {"name":"obj_bubble","order":3,"path":"objects/obj_bubble/obj_bubble.yy",},
   ],
 }
