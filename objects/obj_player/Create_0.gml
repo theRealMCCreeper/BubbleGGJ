@@ -71,10 +71,28 @@ function shooting()
 	//shooting
 	if(GET_KEYS[@KEY.J].pressed && shoot_cooldown_tick <= 0)
 	{
-		shoot_cooldown_tick = shoot_cooldown_time;
 		var _bubble_inst = instance_create_depth(x, y, depth + 10, obj_bubble);
+		with(_bubble_inst)
+		{
+			if(place_meeting(x,y,obj_bubble))
+			{
+				instance_destroy();
+				return false;
+			}
+		}
+		
+		shoot_cooldown_tick = shoot_cooldown_time;
 		_bubble_inst.launch(dir);
 	}else shoot_cooldown_tick -= 1;
+}
+
+function bubble_bouncing()
+{
+	var _bubble_inst = instance_place(x,y+vspd,obj_bubble);
+	if(_bubble_inst != noone)
+	{
+		
+	}
 }
 
 // ---- states ----//

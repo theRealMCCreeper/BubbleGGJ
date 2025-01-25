@@ -56,6 +56,7 @@
     {"id":{"name":"Title","path":"rooms/Title/Title.yy",},},
     {"id":{"name":"general","path":"scripts/general/general.yy",},},
     {"id":{"name":"ui_clicked","path":"scripts/ui_clicked/ui_clicked.yy",},},
+    {"id":{"name":"sfx_pop","path":"sounds/sfx_pop/sfx_pop.yy",},},
     {"id":{"name":"empty_spr","path":"sprites/empty_spr/empty_spr.yy",},},
     {"id":{"name":"filler_spr","path":"sprites/filler_spr/filler_spr.yy",},},
     {"id":{"name":"image_button_shape_spr","path":"sprites/image_button_shape_spr/image_button_shape_spr.yy",},},
