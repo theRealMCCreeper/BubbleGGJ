@@ -36,6 +36,7 @@
     {"name":"empty_spr","order":1,"path":"sprites/empty_spr/empty_spr.yy",},
     {"name":"filler_spr","order":2,"path":"sprites/filler_spr/filler_spr.yy",},
     {"name":"image_button_shape_spr","order":3,"path":"sprites/image_button_shape_spr/image_button_shape_spr.yy",},
+    {"name":"spr_bubble_test_1","order":1,"path":"sprites/spr_bubble_test_1/spr_bubble_test_1.yy",},
     {"name":"spr_wall","order":1,"path":"sprites/spr_wall/spr_wall.yy",},
     {"name":"text_button_shape_spr","order":1,"path":"sprites/text_button_shape_spr/text_button_shape_spr.yy",},
     {"name":"text_shape_spr","order":2,"path":"sprites/text_shape_spr/text_shape_spr.yy",},

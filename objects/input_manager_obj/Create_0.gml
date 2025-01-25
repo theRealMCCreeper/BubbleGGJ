@@ -11,6 +11,7 @@ enum KEY
 	SPACE,
 	L_MOUSE,
 	R_MOUSE,
+	J,
 	T, // DEBUG TOGGLE
 	LENGTH // NOT A KEY
 }
@@ -45,6 +46,7 @@ for (var _i = 0; _i < KEY.LENGTH; ++_i)
 		case KEY.RIGHT: GET_KEYS[@_i].check = ord("D"); break;
 		case KEY.DOWN: GET_KEYS[@_i].check = ord("S"); break;
 		case KEY.SPACE: GET_KEYS[@_i].check = vk_space; break;
+		case KEY.J: GET_KEYS[@_i].check = ord("J"); break;
 		case KEY.L_MOUSE: 
 		GET_KEYS[@_i].check = 1;
 		GET_KEYS[@_i].is_mouse = true;

@@ -4,6 +4,12 @@ vspd = 0; //v velocity
 grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
+dir = 1;
+
+//shooting
+shoot_cooldown_tick = 0;
+shoot_cooldown_time = game_get_speed(gamespeed_fps);
+
 //coyote time
 //gives players a buffer to jump slightly off the edge
 can_jump = 0;
@@ -60,17 +66,32 @@ function move_with_collisions()
 	y += vspd;
 }
 
+function shooting()
+{
+	//shooting
+	if(GET_KEYS[@KEY.J].pressed && shoot_cooldown_tick <= 0)
+	{
+		shoot_cooldown_tick = shoot_cooldown_time;
+		var _bubble_inst = instance_create_depth(x, y, depth + 10, obj_bubble);
+		_bubble_inst.launch(dir);
+	}else shoot_cooldown_tick -= 1;
+}
+
 // ---- states ----//
 function active()
 {
 	//inputs
-	var h_axis = GET_KEYS[@KEY.RIGHT].down - GET_KEYS[@KEY.LEFT].down;
+	var _h_axis = GET_KEYS[@KEY.RIGHT].down - GET_KEYS[@KEY.LEFT].down;
 	
-	var i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
-	var i_jump = GET_KEYS[@KEY.SPACE].down;
+	var _i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
+	var _i_jump = GET_KEYS[@KEY.SPACE].down;
+	
+	shooting();
 	
 	//walking
-	hspd = h_axis * spd;
+	hspd = _h_axis * spd;
+	if(sign(hspd) != 0)
+		dir = sign(hspd);
 	
 	//Update grounded.
 	grounded = place_meeting(x,y+1,collision_tile_layer);
@@ -87,13 +108,13 @@ function active()
 		can_jump = coyote_time;
 	}
 	
-	if(can_jump > 0 && i_jump_pressed)
+	if(can_jump > 0 && _i_jump_pressed)
 	{
 		vspd = jump_force;
 	}
 	
 	//Variable jump
-	if(vspd < 0 && !i_jump)
+	if(vspd < 0 && !_i_jump)
 		vspd = max(vspd,jump_force / 4);
 	
 	//collision + movement
