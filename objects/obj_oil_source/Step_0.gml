@@ -7,6 +7,9 @@ if(sprite_index == spr_oil_source_empty)
 		{
 			_bubble_inst.pop_with_oil();
 			sprite_index = spr_oil_source_full;
+			
+			//open oil door
+			obj_oil_door.open();
 		}
 	}
 }
