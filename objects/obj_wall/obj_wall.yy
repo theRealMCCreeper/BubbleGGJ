@@ -1,12 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"player_obj",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_wall",
+  "eventList":[],
   "managed":true,
-  "name":"player_obj",
+  "name":"obj_wall",
   "overriddenProperties":[],
   "parent":{
     "name":"Gamespace",
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"player_spr",
-    "path":"sprites/player_spr/player_spr.yy",
+    "name":"wall_spr",
+    "path":"sprites/wall_spr/wall_spr.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -36,7 +36,7 @@ function change_state(new_state)
 function move_with_collisions()
 {
 	//horizontal
-	if(place_meeting(x+hspd, y, wall_obj))
+	if(place_meeting(x+hspd, y, obj_wall))
 	{
 		while(!place_meeting(x+sign(hspd),y,obj_wall))
 			x += sign(hspd);
