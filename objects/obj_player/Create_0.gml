@@ -4,6 +4,11 @@ vspd = 0; //v velocity
 grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
+//coyote time
+//gives players a buffer to jump slightly off the edge
+can_jump = 0;
+coyote_time = 8;
+
 collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 
 enum PS //player state
@@ -74,13 +79,17 @@ function active()
 	if(!grounded)
 	{	
 		vspd += grav;
+		
+		can_jump -= 1;
 	}
 	else
-	{		
-		if(i_jump_pressed)
-		{
-			vspd = jump_force;
-		}
+	{	
+		can_jump = coyote_time;
+	}
+	
+	if(can_jump > 0 && i_jump_pressed)
+	{
+		vspd = jump_force;
 	}
 	
 	//Variable jump
