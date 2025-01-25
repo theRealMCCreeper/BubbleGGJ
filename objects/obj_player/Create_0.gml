@@ -5,7 +5,7 @@ grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
 bubble_jump_force = -96;
-bubble_shoot_offset = 400;
+bubble_shoot_offset = 600;
 is_jump_variable = false; //Variable means variable jump height.
 
 dir = 1;

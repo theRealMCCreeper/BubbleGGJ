@@ -42,7 +42,7 @@ if(_bubble_inst != noone)
 y += vspd;
 
 //Oil supply
-var _oil_source_inst = instance_place(x,y,obj_oil_source)
+var _oil_source_inst = instance_place(x,y,obj_oil)
 if(_oil_source_inst != noone)
 {
 	collect_oil(_oil_source_inst);	

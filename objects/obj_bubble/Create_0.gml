@@ -11,7 +11,7 @@ invince_time = game_get_speed(gamespeed_fps) * 0.5;
 invince_tick = invince_time;
 
 //properties
-hasOil = false;
+oil_inst = noone;
 
 collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 
@@ -53,14 +53,24 @@ function bounce_bubble(_other_inst)
 function pop()
 {
 	audio_play_sound(sfx_pop, 10, false);
+	if(oil_inst != noone)
+	{
+		oil_inst.follow_inst = noone;
+		oil_inst.return_to_start();
+		oil_inst = noone;
+	}
+	instance_destroy();
+}
+
+function pop_with_oil()
+{
+	instance_destroy(oil_inst);
+	audio_play_sound(sfx_pop, 10, false);
 	instance_destroy();
 }
 
 function collect_oil(_other)
 {
-	if(_other.sprite_index = spr_oil_source_full)
-	{
-		_other.sprite_index = spr_oil_source_empty;
-		hasOil = true;
-	}
+	_other.follow_inst = self;
+	oil_inst = _other;
 }
