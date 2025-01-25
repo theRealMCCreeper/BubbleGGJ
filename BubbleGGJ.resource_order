@@ -1,10 +1,12 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
     {"name":"Notes","order":13,"path":"folders/Notes.yy",},
     {"name":"Objects","order":9,"path":"folders/Objects.yy",},
+    {"name":"Gamespace","order":10,"path":"folders/Objects/Gamespace.yy",},
+    {"name":"UI","order":9,"path":"folders/Objects/UI.yy",},
     {"name":"Particle Systems","order":15,"path":"folders/Particle Systems.yy",},
     {"name":"Paths","order":4,"path":"folders/Paths.yy",},
     {"name":"Rooms","order":10,"path":"folders/Rooms.yy",},
@@ -13,12 +15,24 @@
     {"name":"Shaders","order":6,"path":"folders/Shaders.yy",},
     {"name":"Sounds","order":3,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":1,"path":"folders/Sprites.yy",},
+    {"name":"Gamespace","order":3,"path":"folders/Sprites/Gamespace.yy",},
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [
-    {"name":"obj_player","order":2,"path":"objects/obj_player/obj_player.yy",},
-    {"name":"spr_player","order":1,"path":"sprites/spr_player/spr_player.yy",},
-    {"name":"obj_fullscreen","order":1,"path":"objects/obj_fullscreen/obj_fullscreen.yy",},
+  "ResourceOrderSettings":[
+    {"name":"image_button_obj","order":4,"path":"objects/image_button_obj/image_button_obj.yy",},
+    {"name":"image_obj","order":5,"path":"objects/image_obj/image_obj.yy",},
+    {"name":"input_manager_obj","order":6,"path":"objects/input_manager_obj/input_manager_obj.yy",},
+    {"name":"text_obj","order":1,"path":"objects/text_obj/text_obj.yy",},
+    {"name":"ui_content_obj","order":2,"path":"objects/ui_content_obj/ui_content_obj.yy",},
+    {"name":"ui_manager_obj","order":3,"path":"objects/ui_manager_obj/ui_manager_obj.yy",},
+    {"name":"wall_obj","order":1,"path":"objects/wall_obj/wall_obj.yy",},
+    {"name":"rm_level1","order":1,"path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"empty_spr","order":1,"path":"sprites/empty_spr/empty_spr.yy",},
+    {"name":"filler_spr","order":2,"path":"sprites/filler_spr/filler_spr.yy",},
+    {"name":"image_button_shape_spr","order":3,"path":"sprites/image_button_shape_spr/image_button_shape_spr.yy",},
+    {"name":"text_button_shape_spr","order":1,"path":"sprites/text_button_shape_spr/text_button_shape_spr.yy",},
+    {"name":"text_shape_spr","order":2,"path":"sprites/text_shape_spr/text_shape_spr.yy",},
+    {"name":"wall_spr","order":1,"path":"sprites/wall_spr/wall_spr.yy",},
   ],
 }
