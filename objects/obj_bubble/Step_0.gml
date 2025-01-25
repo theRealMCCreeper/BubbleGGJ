@@ -42,3 +42,6 @@ if(_bubble_inst != noone)
 y += vspd;
 
 invince_tick -= 1;
+
+//Animation
+image_xscale = hdir;

@@ -5,7 +5,7 @@ grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
 bubble_jump_force = -96;
-bubble_shoot_offset = 500;
+bubble_shoot_offset = 400;
 is_jump_variable = false; //Variable means variable jump height.
 
 dir = 1;
@@ -91,6 +91,7 @@ function shooting()
 		
 		shoot_cooldown_tick = shoot_cooldown_time;
 		_bubble_inst.launch(dir);
+		instance_create_depth(x, y, depth - 10, obj_muzzle_flash).image_xscale = image_xscale;
 	}else shoot_cooldown_tick -= 1;
 }
 
