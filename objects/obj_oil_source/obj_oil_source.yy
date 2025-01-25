@@ -1,14 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bubble",
+  "%Name":"obj_oil_source",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bubble",
+  "name":"obj_oil_source",
   "overriddenProperties":[],
   "parent":{
     "name":"Gamespace",
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bubble",
-    "path":"sprites/spr_bubble/spr_bubble.yy",
+    "name":"spr_oil_source_full",
+    "path":"sprites/spr_oil_source_full/spr_oil_source_full.yy",
   },
   "spriteMaskId":null,
   "visible":true,

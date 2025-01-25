@@ -10,6 +10,9 @@ vertical_initial_speed = 10;
 invince_time = game_get_speed(gamespeed_fps) * 0.5;
 invince_tick = invince_time;
 
+//properties
+hasOil = false;
+
 collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 
 function launch(_hdir)
@@ -51,4 +54,13 @@ function pop()
 {
 	audio_play_sound(sfx_pop, 10, false);
 	instance_destroy();
+}
+
+function collect_oil(_other)
+{
+	if(_other.sprite_index = spr_oil_source_full)
+	{
+		_other.sprite_index = spr_oil_source_empty;
+		hasOil = true;
+	}
 }

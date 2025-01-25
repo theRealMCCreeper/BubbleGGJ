@@ -1,0 +1,1 @@
+obj_oil_source.sprite_index = spr_oil_source_full;
