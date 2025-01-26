@@ -63,6 +63,7 @@
     {"id":{"name":"Title","path":"rooms/Title/Title.yy",},},
     {"id":{"name":"general","path":"scripts/general/general.yy",},},
     {"id":{"name":"ui_clicked","path":"scripts/ui_clicked/ui_clicked.yy",},},
+    {"id":{"name":"sfx_door_open","path":"sounds/sfx_door_open/sfx_door_open.yy",},},
     {"id":{"name":"sfx_jump","path":"sounds/sfx_jump/sfx_jump.yy",},},
     {"id":{"name":"sfx_pop","path":"sounds/sfx_pop/sfx_pop.yy",},},
     {"id":{"name":"sfx_tada","path":"sounds/sfx_tada/sfx_tada.yy",},},

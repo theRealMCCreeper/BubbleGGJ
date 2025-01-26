@@ -40,6 +40,7 @@
     {"name":"rm_level1_1","order":2,"path":"rooms/rm_level1_1/rm_level1_1.yy",},
     {"name":"rm_level1","order":1,"path":"rooms/rm_level1/rm_level1.yy",},
     {"name":"general","order":1,"path":"scripts/general/general.yy",},
+    {"name":"sfx_door_open","order":4,"path":"sounds/sfx_door_open/sfx_door_open.yy",},
     {"name":"sfx_jump","order":1,"path":"sounds/sfx_jump/sfx_jump.yy",},
     {"name":"sfx_tada","order":2,"path":"sounds/sfx_tada/sfx_tada.yy",},
     {"name":"sfx_walk","order":3,"path":"sounds/sfx_walk/sfx_walk.yy",},
