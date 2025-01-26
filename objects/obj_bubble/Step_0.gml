@@ -50,7 +50,11 @@ else if(place_meeting(x,y,obj_gas_source))
 else
 	is_touching_source = false;
 	
-	
+//Button
+if(place_meeting(x,y,obj_button))
+{
+	obj_button.press();
+}
 
 invince_tick -= 1;
 

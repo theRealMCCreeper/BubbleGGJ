@@ -6,12 +6,12 @@
     {"name":"Doors","order":1,"path":"folders/Sprites/Gamespace/Doors.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_button","order":1,"path":"objects/obj_button/obj_button.yy",},
     {"name":"obj_fence_mid","order":3,"path":"objects/obj_fence_mid/obj_fence_mid.yy",},
     {"name":"obj_fence_parent","order":4,"path":"objects/obj_fence_parent/obj_fence_parent.yy",},
     {"name":"obj_fence_top","order":2,"path":"objects/obj_fence_top/obj_fence_top.yy",},
     {"name":"obj_fire_source_top","order":3,"path":"objects/obj_fire_source_top/obj_fire_source_top.yy",},
     {"name":"obj_fire_source","order":2,"path":"objects/obj_fire_source/obj_fire_source.yy",},
-    {"name":"obj_gas_button","order":1,"path":"objects/obj_gas_button/obj_gas_button.yy",},
     {"name":"obj_gas_source_top","order":5,"path":"objects/obj_gas_source_top/obj_gas_source_top.yy",},
     {"name":"obj_gas_source","order":4,"path":"objects/obj_gas_source/obj_gas_source.yy",},
     {"name":"obj_water_source_bottom","order":1,"path":"objects/obj_water_source_bottom/obj_water_source_bottom.yy",},
