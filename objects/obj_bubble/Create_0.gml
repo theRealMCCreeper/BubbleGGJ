@@ -138,7 +138,7 @@ function touch_source(_source_type)
 	if(is_touching_source)
 		return false;
 	
-	switch(_source_type)
+	/*switch(_source_type)
 	{
 		case ET.WATER:
 			switch(element)
@@ -162,7 +162,8 @@ function touch_source(_source_type)
 				case ET.NONE: change_element(ET.GAS); break;
 			}
 			break;
-	}
+	}*/
+	change_element(_source_type);
 	
 	is_touching_source = true;
 	
