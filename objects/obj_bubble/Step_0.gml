@@ -23,7 +23,7 @@ if(element == ET.WATER)
 //gas
 if(element == ET.GAS)
 {
-	//vspd = lerp(vspd, )
+	vspd = lerp(vspd, gas_rise_speed, 0.1);
 }
 
 

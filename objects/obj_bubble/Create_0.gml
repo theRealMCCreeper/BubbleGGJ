@@ -6,6 +6,7 @@ initial_speed = 50;
 vertical_initial_speed = 10;
 
 water_fall_speed = 5;//5;
+gas_rise_speed = -5;
 
 //bounce_buffer = 64;
 
