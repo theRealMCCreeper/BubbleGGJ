@@ -91,17 +91,32 @@ function collect_oil(_other)
 
 function change_element(_element)
 {
-	switch(_element)
+	//previous element
+	switch(element)
 	{
 		case ET.WATER:
+			vspd = 0;
+			break;
+			
+		case ET.GAS:
+			vspd = 0;
+			break;
+	}
+	
+	//current element
+	switch(_element)
+	{
+		case ET.NONE:
+			sprite_index = spr_bubble;
+			break;
+			
+		case ET.WATER:
 			sprite_index = spr_bubble_water;
-			element = ET.WATER;
 			//vspd = water_fall_speed;
 			break;
 			
 		case ET.FIRE:
 			sprite_index = spr_bubble_fire;
-			element = ET.FIRE;
 			var hdir = 1
 			if(hspd != 0)
 				hdir = sign(hspd);
@@ -109,6 +124,8 @@ function change_element(_element)
 			hspd = initial_speed * hdir;
 			break;
 	}
+	
+	element = _element;
 }
 
 function touch_source(_source_type)
@@ -122,6 +139,7 @@ function touch_source(_source_type)
 			switch(element)
 			{
 				case ET.NONE: change_element(ET.WATER);
+				case ET.FIRE: change_element(ET.NONE);
 			}
 			break;
 			
