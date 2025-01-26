@@ -101,6 +101,15 @@ if (set_buttons_current < set_buttons_total)
 }
 else
 {	
+	// Allow Pausing & Unpausing
+	if (GET_KEYS[@KEY.ESCAPE].pressed && click_action != "")
+	{
+		// Play a sound effect
+		audio_play_sound(button_move_snd, 1, false);
+		
+		ui_clicked(UI_MANAGER);
+	}
+	
 	// Only allow menu actions if the game is paused
 	// Note: title sceens count as paused!
 	if (!is_paused || lock_inputs) exit;
@@ -141,17 +150,21 @@ else
 		}
 	}
 	
-	
-	
 	if (menu_mouse_target != noone)
 	{
 		// Set the keyboard variant to the button selected by the mouse
-		menu_keyboard_target = menu_mouse_target;
+		if (menu_keyboard_target != menu_mouse_target)
+		{
+			audio_play_sound(button_move_snd, 1, false);
+			menu_keyboard_target = menu_mouse_target;
+		}
+		
 		
 		// Click the selected button
 		if (GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.SPACE].pressed || 
 			GET_KEYS[@KEY.Z].pressed || GET_KEYS[@KEY.ENTER].pressed)
 		{
+			audio_play_sound(sfx_pop, 1, false);
 			menu_buttons.list[|menu_keyboard_target].on_click();
 		}
 	}
@@ -177,7 +190,7 @@ else
 		if (GET_KEYS[@KEY.LEFT].pressed || GET_KEYS[@KEY.A].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			audio_play_sound(button_move_snd, 1, false);
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_left != noone)
@@ -190,7 +203,7 @@ else
 		if (GET_KEYS[@KEY.UP].pressed || GET_KEYS[@KEY.W].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard up");
+			audio_play_sound(button_move_snd, 1, false);
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_up != noone)
@@ -203,7 +216,7 @@ else
 		if (GET_KEYS[@KEY.RIGHT].pressed || GET_KEYS[@KEY.D].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			audio_play_sound(button_move_snd, 1, false);
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_right != noone)
@@ -216,7 +229,7 @@ else
 		if (GET_KEYS[@KEY.DOWN].pressed || GET_KEYS[@KEY.S].pressed)
 		{
 			// Play a sound effect
-			print("reminder to put sound for menu keyboard down");
+			audio_play_sound(button_move_snd, 1, false);
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_down != noone)
@@ -228,6 +241,9 @@ else
 		// Click the selected button
 		if (GET_KEYS[@KEY.SPACE].pressed || GET_KEYS[@KEY.Z].pressed || GET_KEYS[@KEY.ENTER].pressed) 
 		{
+			// Play a sound effect
+			audio_play_sound(sfx_pop, 1, false);
+			
 			menu_buttons.list[|menu_keyboard_target].on_click();
 		}
 	}
