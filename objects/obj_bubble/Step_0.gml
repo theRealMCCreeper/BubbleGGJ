@@ -14,7 +14,11 @@ if(abs(hspd) <= abs(min_speed))
 	hspd = min_speed * hdir;
 }
 
-
+//water
+if(element == ET.WATER)
+{
+	vspd = lerp(vspd, water_fall_speed, 0.1);
+}
 
 //vspd = lerp(vspd, 0, 0.1);
 

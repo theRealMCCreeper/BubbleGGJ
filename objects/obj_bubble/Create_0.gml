@@ -5,7 +5,7 @@ min_speed = 10;
 initial_speed = 50;
 vertical_initial_speed = 10;
 
-water_fall_speed = 5;
+water_fall_speed = 5;//5;
 
 //bounce_buffer = 64;
 
@@ -95,11 +95,13 @@ function change_element(_element)
 	{
 		case ET.WATER:
 			sprite_index = spr_bubble_water;
-			vspd = water_fall_speed;
+			element = ET.WATER;
+			//vspd = water_fall_speed;
 			break;
 			
 		case ET.FIRE:
 			sprite_index = spr_bubble_fire;
+			element = ET.FIRE;
 			var hdir = 1
 			if(hspd != 0)
 				hdir = sign(hspd);
@@ -139,6 +141,7 @@ function touch_source(_source_type)
 //--States--//
 function wall_bubble_collisions()
 {
+	//horizontal
 	//wall
 	if(place_meeting(x+hspd,y,collision_tile_layer) || place_meeting(x+hspd,y,obj_wall))
 	{
@@ -151,16 +154,22 @@ function wall_bubble_collisions()
 		bounce_bubble(_bubble_inst);
 	}
 	x += hspd;
-
-	if(place_meeting(x,y+vspd,collision_tile_layer) || place_meeting(x+hspd,y,obj_wall))
+	
+	
+	//vertical
+	var _water_fall = 0;
+	if(element == ET.WATER)
+		_water_fall = 0;//water_fall_speed;
+		
+	if(place_meeting(x,y+vspd+_water_fall,collision_tile_layer) || place_meeting(x,y+vspd+_water_fall,obj_wall))
 	{
 		pop();
 	}
 	//bubble
-	var _bubble_inst = instance_place(x,y+vspd,obj_bubble);
+	var _bubble_inst = instance_place(x,y+vspd+_water_fall,obj_bubble);
 	if(_bubble_inst != noone)
 	{
 		bounce_bubble(_bubble_inst);
 	}
-	y += vspd;
+	y += vspd + _water_fall;
 }
