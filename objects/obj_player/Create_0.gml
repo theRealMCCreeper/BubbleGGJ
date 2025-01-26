@@ -98,7 +98,8 @@ function move_with_collisions()
 function shooting()
 {
 	//shooting
-	if(GET_KEYS[@KEY.J].pressed && shoot_cooldown_tick <= 0)
+	if((GET_KEYS[@KEY.ENTER].pressed || GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.Z].pressed) && 
+	   shoot_cooldown_tick <= 0)
 	{
 		var _bubble_inst = instance_create_depth(x + dir * bubble_shoot_offset, y, depth + 10, obj_bubble);
 		with(_bubble_inst)
@@ -205,7 +206,10 @@ function swimming()
 function active()
 {
 	//inputs
-	var _h_axis = GET_KEYS[@KEY.RIGHT].down - GET_KEYS[@KEY.LEFT].down;
+	
+	var _h_axis = 
+			(GET_KEYS[@KEY.RIGHT].down || GET_KEYS[@KEY.D].down) 
+			- (GET_KEYS[@KEY.LEFT].down || GET_KEYS[@KEY.A].down);
 	
 	var _i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
 	var _i_jump = GET_KEYS[@KEY.SPACE].down;
