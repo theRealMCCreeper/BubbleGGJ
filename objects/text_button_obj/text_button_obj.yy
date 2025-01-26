@@ -6,7 +6,11 @@
   ],
   "managed":true,
   "name":"text_button_obj",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"do_backing","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"do_outline","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"text_color","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FFCCCCCC",},
+  ],
   "parent":{
     "name":"UI",
     "path":"folders/Objects/UI.yy",
@@ -38,16 +42,16 @@
     {"$GMObjectProperty":"v1","%Name":"button_number","filters":[],"listItems":[],"multiselect":false,"name":"button_number","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"button_left","filters":[
         "GMObject",
-      ],"listItems":[],"multiselect":false,"name":"button_left","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"button_left","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"button_up","filters":[
         "GMObject",
-      ],"listItems":[],"multiselect":false,"name":"button_up","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"button_up","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"button_right","filters":[
         "GMObject",
-      ],"listItems":[],"multiselect":false,"name":"button_right","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"button_right","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"button_down","filters":[
         "GMObject",
-      ],"listItems":[],"multiselect":false,"name":"button_down","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"button_down","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
