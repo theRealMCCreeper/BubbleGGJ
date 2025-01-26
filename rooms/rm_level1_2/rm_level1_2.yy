@@ -111,8 +111,8 @@
   ],
   "name":"rm_level1_2",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"FinalLevels",
+    "path":"folders/Rooms/FinalLevels.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
