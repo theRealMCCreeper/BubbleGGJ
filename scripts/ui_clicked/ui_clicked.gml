@@ -69,7 +69,7 @@ function ui_clicked(_id_button)
 		case "go_lvl1":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level1_1);
+			room_goto(rm_level_1);
 		}
 		else
 		{
@@ -84,7 +84,7 @@ function ui_clicked(_id_button)
 		case "go_lvl2":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level2);
+			room_goto(rm_level_2);
 		}
 		else
 		{
@@ -99,7 +99,7 @@ function ui_clicked(_id_button)
 		case "go_lvl3":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level3);
+			room_goto(rm_level_3);
 		}
 		else
 		{
@@ -114,7 +114,7 @@ function ui_clicked(_id_button)
 		case "go_lvl4":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level4);
+			room_goto(rm_level_4);
 		}
 		else
 		{
@@ -129,7 +129,7 @@ function ui_clicked(_id_button)
 		case "go_lvl5":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level5);
+			room_goto(rm_level_5);
 		}
 		else
 		{
@@ -144,7 +144,7 @@ function ui_clicked(_id_button)
 		case "go_lvl6":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level6);
+			room_goto(rm_level_6);
 		}
 		else
 		{
@@ -159,7 +159,7 @@ function ui_clicked(_id_button)
 		case "go_lvl7":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level7);
+			room_goto(rm_level_7);
 		}
 		else
 		{
@@ -174,7 +174,7 @@ function ui_clicked(_id_button)
 		case "go_lvl8":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level8);
+			room_goto(rm_level_8);
 		}
 		else
 		{
