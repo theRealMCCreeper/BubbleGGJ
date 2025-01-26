@@ -69,6 +69,7 @@
     {"id":{"name":"ui_manager_obj","path":"objects/ui_manager_obj/ui_manager_obj.yy",},},
     {"id":{"name":"rm_credits","path":"rooms/rm_credits/rm_credits.yy",},},
     {"id":{"name":"rm_level1_1","path":"rooms/rm_level1_1/rm_level1_1.yy",},},
+    {"id":{"name":"rm_level1_2","path":"rooms/rm_level1_2/rm_level1_2.yy",},},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"id":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"id":{"name":"rm_selection","path":"rooms/rm_selection/rm_selection.yy",},},
@@ -157,6 +158,7 @@
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},
     {"roomId":{"name":"rm_level1_1","path":"rooms/rm_level1_1/rm_level1_1.yy",},},
+    {"roomId":{"name":"rm_level1_2","path":"rooms/rm_level1_2/rm_level1_2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
