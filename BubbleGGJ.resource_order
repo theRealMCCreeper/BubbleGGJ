@@ -3,9 +3,11 @@
     {"name":"Sources","order":1,"path":"folders/Objects/Gamespace/Sources.yy",},
   ],
   "ResourceOrderSettings":[
-    {"name":"rm_level2","order":1,"path":"rooms/rm_level2/rm_level2.yy",},
+    {"name":"obj_water_source_bottom","order":1,"path":"objects/obj_water_source_bottom/obj_water_source_bottom.yy",},
+    {"name":"rm_level1_1","order":1,"path":"rooms/rm_level1_1/rm_level1_1.yy",},
     {"name":"spr_bubble_water","order":1,"path":"sprites/spr_bubble_water/spr_bubble_water.yy",},
     {"name":"spr_oil_source_empty","order":1,"path":"sprites/spr_oil_source_empty/spr_oil_source_empty.yy",},
+    {"name":"spr_water_source_bottom","order":3,"path":"sprites/spr_water_source_bottom/spr_water_source_bottom.yy",},
     {"name":"spr_water_source","order":2,"path":"sprites/spr_water_source/spr_water_source.yy",},
   ],
 }

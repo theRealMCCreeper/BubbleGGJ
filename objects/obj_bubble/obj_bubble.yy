@@ -35,6 +35,9 @@
     "name":"spr_bubble",
     "path":"sprites/spr_bubble/spr_bubble.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_bubble",
+    "path":"sprites/spr_bubble/spr_bubble.yy",
+  },
   "visible":true,
 }
