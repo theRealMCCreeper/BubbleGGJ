@@ -123,6 +123,10 @@ function change_element(_element)
 	
 			hspd = initial_speed * hdir;
 			break;
+			
+		case ET.GAS:
+			sprite_index = spr_bubble_gas;
+			break;
 	}
 	
 	element = _element;
@@ -148,6 +152,13 @@ function touch_source(_source_type)
 			{
 				case ET.NONE: change_element(ET.FIRE); break;
 				case ET.WATER: change_element(ET.NONE); break;
+			}
+			break;
+			
+		case ET.GAS:
+			switch(element)
+			{
+				case ET.NONE: change_element(ET.GAS); break;
 			}
 			break;
 	}

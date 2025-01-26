@@ -20,6 +20,13 @@ if(element == ET.WATER)
 	vspd = lerp(vspd, water_fall_speed, 0.1);
 }
 
+//gas
+if(element == ET.GAS)
+{
+	//vspd = lerp(vspd, )
+}
+
+
 //vspd = lerp(vspd, 0, 0.1);
 
 //Collisions
@@ -38,6 +45,8 @@ if(place_meeting(x,y,obj_water_source))
 	touch_source(ET.WATER);
 else if(place_meeting(x,y,obj_fire_source))
 	touch_source(ET.FIRE);
+else if(place_meeting(x,y,obj_gas_source))
+	touch_source(ET.GAS);
 else
 	is_touching_source = false;
 	
