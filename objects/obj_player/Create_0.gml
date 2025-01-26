@@ -4,14 +4,22 @@ vspd = 0; //v velocity
 grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
+//h_knock_back = 0; //applied to hspd
+//h_knock_back_drag = 50;
+freeze_walk_tick = 0;
+
 bubble_jump_force = -96;
 bubble_shoot_offset = 600;
 is_jump_variable = false; //Variable means variable jump height.
+grav_max = 100;
+
 climb_water_speed = -32;
 water_grav = 2;
-
-grav_max = 100;
 water_grav_max = 25;
+
+fire_knock_back_h = 70;
+fire_knock_back_v = -50;
+fire_freeze_walk_time = game_get_speed(gamespeed_fps) * 0.25;
 
 dir = 1;
 
@@ -173,7 +181,20 @@ function gravity_and_jumping()
 		vspd = max(vspd,jump_force / 4);
 }
 
-
+function swimming()
+{
+	set_grounded(true);
+		
+	if(GET_KEYS[@KEY.SPACE].down)
+	{
+		vspd = climb_water_speed;
+	}else
+	{
+		vspd += water_grav;
+		vspd = min(water_grav_max, vspd);
+	}
+	bubble_bouncing();
+}
 
 
 // ---- states ----//
@@ -193,24 +214,16 @@ function active()
 	
 	shooting();
 	
-	//walking
-	hspd = _h_axis * spd;
+	//Horizontal stuff
+	if(freeze_walk_tick <= 0)
+		hspd = _h_axis * spd;
 	if(sign(hspd) != 0)
 		dir = sign(hspd);
 	
+	//Vertical stuff
 	if(place_meeting(x,y,obj_water_source))
 	{
-		set_grounded(true);
-		
-		if(_i_jump)
-		{
-			vspd = climb_water_speed;
-		}else
-		{
-			vspd += water_grav;
-			vspd = min(water_grav_max, vspd);
-		}
-		bubble_bouncing();
+		swimming();
 	}else
 	{
 		//Update grounded.
@@ -220,6 +233,23 @@ function active()
 		gravity_and_jumping();
 	}
 	
+	//touch fire
+	var _fire_source = instance_place(x, y, obj_fire_source);
+	if(_fire_source != noone)
+	{
+		var _dir = sign(x - (_fire_source.x + _fire_source.sprite_width * 0.5));
+		hspd = _dir * fire_knock_back_h;
+		freeze_walk_tick = fire_freeze_walk_time;
+		jump(false, fire_knock_back_v);
+	}
+	
+	/*hspd += h_knock_back;
+	h_knock_back += sign(0 - h_knock_back) * h_knock_back_drag;
+	if(abs(h_knock_back) <= 4)
+		h_knock_back = 0;*/
+		
 	//collision + movement
 	move_with_collisions();
+	
+	freeze_walk_tick -= 1;
 }
