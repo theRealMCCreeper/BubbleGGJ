@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_collision_tileset",
   "bboxMode":0,
-  "bbox_bottom":999,
+  "bbox_bottom":1999,
   "bbox_left":0,
   "bbox_right":1999,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"767a2234-77c5-40b0-9626-472dc0096a9f","name":"767a2234-77c5-40b0-9626-472dc0096a9f","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"7fb79a60-2abb-4db6-b6fd-c5e9101e4ca4","name":"7fb79a60-2abb-4db6-b6fd-c5e9101e4ca4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":500,
   "gridY":500,
-  "height":1000,
+  "height":2000,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"44234df1-4a25-4a68-9450-ebfc72039d14","blendMode":0,"displayName":"default","isLocked":false,"name":"44234df1-4a25-4a68-9450-ebfc72039d14","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"ea194270-6bf1-4b7d-88b3-2002722995aa","blendMode":0,"displayName":"default","isLocked":false,"name":"ea194270-6bf1-4b7d-88b3-2002722995aa","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_collision_tileset",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"767a2234-77c5-40b0-9626-472dc0096a9f","path":"sprites/spr_collision_tileset/spr_collision_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"bb434005-6cb1-452e-aef4-4a1bb9babeef","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7fb79a60-2abb-4db6-b6fd-c5e9101e4ca4","path":"sprites/spr_collision_tileset/spr_collision_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a9adf8b6-0d90-4505-a3e8-dbad4544ea16","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

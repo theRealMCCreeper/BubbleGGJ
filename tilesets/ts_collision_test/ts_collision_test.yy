@@ -8,7 +8,7 @@
     "TileSerialiseData":[],
   },
   "name":"ts_collision_test",
-  "out_columns":3,
+  "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -34,5 +34,5 @@
   "tileWidth":500,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":8,
+  "tile_count":16,
 }
