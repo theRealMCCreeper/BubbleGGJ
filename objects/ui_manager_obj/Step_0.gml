@@ -149,7 +149,8 @@ else
 		menu_keyboard_target = menu_mouse_target;
 		
 		// Click the selected button
-		if (GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.SPACE].pressed)
+		if (GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.SPACE].pressed || 
+			GET_KEYS[@KEY.Z].pressed || GET_KEYS[@KEY.ENTER].pressed)
 		{
 			menu_buttons.list[|menu_keyboard_target].on_click();
 		}
@@ -173,7 +174,7 @@ else
 		}
 		
 		// Menu move left with keyboard
-		if (GET_KEYS[@KEY.LEFT].pressed)
+		if (GET_KEYS[@KEY.LEFT].pressed || GET_KEYS[@KEY.A].pressed)
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard down");
@@ -186,7 +187,7 @@ else
 		}
 		
 		// Menu move up with keyboard
-		if (GET_KEYS[@KEY.UP].pressed)
+		if (GET_KEYS[@KEY.UP].pressed || GET_KEYS[@KEY.W].pressed)
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard up");
@@ -199,7 +200,7 @@ else
 		}
 		
 		// Menu move right with keyboard
-		if (GET_KEYS[@KEY.RIGHT].pressed)
+		if (GET_KEYS[@KEY.RIGHT].pressed || GET_KEYS[@KEY.D].pressed)
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard down");
@@ -212,7 +213,7 @@ else
 		}
 		
 		// Menu move down with keyboard
-		if (GET_KEYS[@KEY.DOWN].pressed)
+		if (GET_KEYS[@KEY.DOWN].pressed || GET_KEYS[@KEY.S].pressed)
 		{
 			// Play a sound effect
 			print("reminder to put sound for menu keyboard down");
@@ -225,6 +226,9 @@ else
 		}
 	
 		// Click the selected button
-		if (GET_KEYS[@KEY.SPACE].pressed) menu_buttons.list[|menu_keyboard_target].on_click();
+		if (GET_KEYS[@KEY.SPACE].pressed || GET_KEYS[@KEY.Z].pressed || GET_KEYS[@KEY.ENTER].pressed) 
+		{
+			menu_buttons.list[|menu_keyboard_target].on_click();
+		}
 	}
 }

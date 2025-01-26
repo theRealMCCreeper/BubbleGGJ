@@ -69,6 +69,126 @@ function ui_clicked(_id_button)
 		}
 		break;
 		
+		case "go_lvl1":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level1_1);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl2":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level2);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl3":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level3);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl4":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level4);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl5":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level5);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl6":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level6);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl7":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level7);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
+		case "go_lvl8":
+		if (UI_MANAGER.transition_awaiting)
+		{
+			room_goto(rm_level8);
+		}
+		else
+		{
+			// Start transition
+			UI_MANAGER.do_transition_in = false;
+			UI_MANAGER.transition_timer = UI_MANAGER.transition_out_length;
+			UI_MANAGER.transition_awaiting = true;
+			UI_MANAGER.lock_inputs = true;
+		}
+		break;
+		
 		case "game_end":
 		if (UI_MANAGER.transition_awaiting)
 		{
