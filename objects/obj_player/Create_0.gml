@@ -100,7 +100,7 @@ function move_with_collisions()
 function shooting()
 {
 	//shooting
-	if((GET_KEYS[@KEY.ENTER].pressed || GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.Z].pressed) || GET_KEYS[@KEY.J].pressed&& 
+	if((GET_KEYS[@KEY.ENTER].pressed || GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.Z].pressed || GET_KEYS[@KEY.J].pressed) && 
 	   shoot_cooldown_tick <= 0)
 	{
 		var _bubble_inst = instance_create_depth(x + dir * bubble_shoot_offset, y, depth + 10, obj_bubble);
