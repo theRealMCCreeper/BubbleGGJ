@@ -2,8 +2,12 @@
   "FolderOrderSettings":[
     {"name":"Sources","order":1,"path":"folders/Objects/Gamespace/Sources.yy",},
     {"name":"FinalLevels","order":5,"path":"folders/Rooms/FinalLevels.yy",},
+    {"name":"Doors","order":1,"path":"folders/Sprites/Gamespace/Doors.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_fence_mid","order":3,"path":"objects/obj_fence_mid/obj_fence_mid.yy",},
+    {"name":"obj_fence_parent","order":4,"path":"objects/obj_fence_parent/obj_fence_parent.yy",},
+    {"name":"obj_fence_top","order":2,"path":"objects/obj_fence_top/obj_fence_top.yy",},
     {"name":"obj_fire_source_top","order":3,"path":"objects/obj_fire_source_top/obj_fire_source_top.yy",},
     {"name":"obj_fire_source","order":2,"path":"objects/obj_fire_source/obj_fire_source.yy",},
     {"name":"obj_gas_source_top","order":5,"path":"objects/obj_gas_source_top/obj_gas_source_top.yy",},
@@ -34,6 +38,8 @@
     {"name":"spr_bubble_fire","order":2,"path":"sprites/spr_bubble_fire/spr_bubble_fire.yy",},
     {"name":"spr_bubble_gas","order":3,"path":"sprites/spr_bubble_gas/spr_bubble_gas.yy",},
     {"name":"spr_bubble_water","order":1,"path":"sprites/spr_bubble_water/spr_bubble_water.yy",},
+    {"name":"spr_fence_mid","order":3,"path":"sprites/spr_fence_mid/spr_fence_mid.yy",},
+    {"name":"spr_fence_top","order":2,"path":"sprites/spr_fence_top/spr_fence_top.yy",},
     {"name":"spr_fire_source_top","order":5,"path":"sprites/spr_fire_source_top/spr_fire_source_top.yy",},
     {"name":"spr_fire_source","order":4,"path":"sprites/spr_fire_source/spr_fire_source.yy",},
     {"name":"spr_gas_source_top","order":7,"path":"sprites/spr_gas_source_top/spr_gas_source_top.yy",},

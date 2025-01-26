@@ -77,18 +77,18 @@ function change_state(new_state)
 function move_with_collisions()
 {
 	//horizontal
-	if(place_meeting(x+hspd, y, collision_tile_layer))
+	if(place_meeting(x+hspd, y, collision_tile_layer) || place_meeting(x+hspd, y, obj_fence_parent))
 	{
-		while(!place_meeting(x+sign(hspd),y,collision_tile_layer))
+		while(!place_meeting(x+sign(hspd),y,collision_tile_layer) && !place_meeting(x+sign(hspd), y, obj_fence_parent))
 			x += sign(hspd);
 		hspd = 0;
 	}
 	x += hspd;
 	
 	//vertical
-	if(place_meeting(x,y+vspd,collision_tile_layer))
+	if(place_meeting(x,y+vspd,collision_tile_layer) || place_meeting(x,y+vspd,obj_fence_parent))
 	{
-		while(!place_meeting(x,y+sign(vspd),collision_tile_layer))
+		while(!place_meeting(x,y+sign(vspd),collision_tile_layer) && !place_meeting(x,y+sign(vspd),obj_fence_parent))
 			y += sign(vspd);
 		vspd = 0;
 	}
@@ -145,7 +145,7 @@ function jump(_is_jump_variable, _force)
 function update_grounded()
 {
 	//grounded = place_meeting(x,y+1,collision_tile_layer);
-	set_grounded(place_meeting(x,y+1,collision_tile_layer));
+	set_grounded(place_meeting(x,y+1,collision_tile_layer) || place_meeting(x,y+1,obj_fence_parent));
 }
 
 function set_grounded(new_grounded)
