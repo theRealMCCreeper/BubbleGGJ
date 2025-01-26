@@ -17,7 +17,7 @@ if(abs(hspd) <= abs(min_speed))
 
 //Collisions
 //wall
-if(place_meeting(x+hspd,y,collision_tile_layer))
+if(place_meeting(x+hspd,y,collision_tile_layer) || place_meeting(x+hspd,y,obj_wall))
 {
 	pop();
 }
@@ -29,7 +29,7 @@ if(_bubble_inst != noone)
 }
 x += hspd;
 
-if(place_meeting(x,y+vspd,collision_tile_layer))
+if(place_meeting(x,y+vspd,collision_tile_layer) || place_meeting(x+hspd,y,obj_wall))
 {
 	pop();
 }

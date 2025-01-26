@@ -28,6 +28,7 @@ collision_tile_layer = layer_tilemap_get_id("Tiles_1");
 enum PS //player state
 {
 	ACTIVE,
+	VICTORY,
 	ENUM_COUNT
 }
 
@@ -49,6 +50,12 @@ function change_state(new_state)
 	switch(state)
 	{
 		case PS.ACTIVE:
+			break;
+			
+		case PS.VICTORY:
+			sprite_index = spr_player_victory;
+			image_index = 0;
+			audio_play_sound(sfx_tada, 10, false);
 			break;
 	}
 }
@@ -125,6 +132,12 @@ function active()
 	
 	var _i_jump_pressed = GET_KEYS[@KEY.SPACE].pressed;
 	var _i_jump = GET_KEYS[@KEY.SPACE].down;
+	
+	//Victory
+	if(place_meeting(x,y,obj_oil_door) && obj_oil_door.sprite_index == spr_oil_door_opened)
+	{
+		change_state(PS.VICTORY);
+	}
 	
 	shooting();
 	

@@ -3,6 +3,9 @@ switch(state)
 	case PS.ACTIVE:
 		active();
 		
+		if(state != PS.ACTIVE)
+			break;
+			
 		//Animation
 		image_xscale = dir;
 		
