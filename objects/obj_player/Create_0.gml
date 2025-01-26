@@ -7,6 +7,11 @@ jump_force = -96; //jump forcgrounded = false;
 bubble_jump_force = -96;
 bubble_shoot_offset = 600;
 is_jump_variable = false; //Variable means variable jump height.
+climb_water_speed = -32;
+water_grav = 2;
+
+grav_max = 100;
+water_grav_max = 25;
 
 dir = 1;
 
@@ -124,6 +129,53 @@ function jump(_is_jump_variable, _force)
 	audio_play_sound(sfx_jump, 11, false);
 }
 
+function update_grounded()
+{
+	//grounded = place_meeting(x,y+1,collision_tile_layer);
+	set_grounded(place_meeting(x,y+1,collision_tile_layer));
+}
+
+function set_grounded(new_grounded)
+{
+	grounded = new_grounded;
+	
+	if(grounded)
+	{
+		can_jump = coyote_time;
+	}
+}
+
+function gravity_and_jumping()
+{
+	if(!grounded)
+	{	
+		vspd += grav;
+		vspd = min(grav_max, vspd);
+		
+		can_jump -= 1;
+		
+		bubble_bouncing();
+	}
+	else
+	{	
+		can_jump = coyote_time;
+	}
+	
+	if(can_jump > 0 && GET_KEYS[@KEY.SPACE].pressed)
+	{
+		//vspd = jump_force;
+		//is_jump_variable = true;
+		jump(true, jump_force);
+	}
+	
+	//Variable jump
+	if(is_jump_variable && vspd < 0 && !GET_KEYS[@KEY.SPACE].down)
+		vspd = max(vspd,jump_force / 4);
+}
+
+
+
+
 // ---- states ----//
 function active()
 {
@@ -146,33 +198,27 @@ function active()
 	if(sign(hspd) != 0)
 		dir = sign(hspd);
 	
-	//Update grounded.
-	grounded = place_meeting(x,y+1,collision_tile_layer);
-
-	//Gravity + Jumping
-	if(!grounded)
-	{	
-		vspd += grav;
-		
-		can_jump -= 1;
-		
-		bubble_bouncing();
-	}
-	else
-	{	
-		can_jump = coyote_time;
-	}
-	
-	if(can_jump > 0 && _i_jump_pressed)
+	if(place_meeting(x,y,obj_water_source))
 	{
-		//vspd = jump_force;
-		//is_jump_variable = true;
-		jump(true, jump_force);
+		set_grounded(true);
+		
+		if(_i_jump)
+		{
+			vspd = climb_water_speed;
+		}else
+		{
+			vspd += water_grav;
+			vspd = min(water_grav_max, vspd);
+		}
+		bubble_bouncing();
+	}else
+	{
+		//Update grounded.
+		update_grounded();
+
+		//Gravity + Jumping
+		gravity_and_jumping();
 	}
-	
-	//Variable jump
-	if(is_jump_variable && vspd < 0 && !_i_jump)
-		vspd = max(vspd,jump_force / 4);
 	
 	//collision + movement
 	move_with_collisions();
