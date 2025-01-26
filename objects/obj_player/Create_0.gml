@@ -4,6 +4,8 @@ vspd = 0; //v velocity
 grav = 4; //gravity
 jump_force = -96; //jump forcgrounded = false;
 
+audio_play_sound(song, 2, true);
+
 //h_knock_back = 0; //applied to hspd
 //h_knock_back_drag = 50;
 freeze_walk_tick = 0;

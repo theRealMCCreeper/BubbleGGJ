@@ -15,6 +15,7 @@
     {"name":"GoSelection","path":"rooms/rm_title/rm_title.yy",},
     {"name":"GoCredits","path":"rooms/rm_title/rm_title.yy",},
     {"name":"ExitGame","path":"rooms/rm_title/rm_title.yy",},
+    {"name":"inst_2DCD74A","path":"rooms/rm_title/rm_title.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -68,6 +69,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"image_button_obj","path":"objects/image_button_obj/image_button_obj.yy",},"propertyId":{"name":"button_right","path":"objects/image_button_obj/image_button_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"image_button_obj","path":"objects/image_button_obj/image_button_obj.yy",},"propertyId":{"name":"click_action","path":"objects/image_button_obj/image_button_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"game_end",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":577.0,"scaleY":353.00003,"x":1248.0,"y":608.0,},
+        {"$GMRInstance":"v1","%Name":"inst_2DCD74A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2DCD74A","objectId":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":32.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InstanceBack","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"TitleBack","colour":4279834905,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"TitleBack","objectId":{"name":"image_obj","path":"objects/image_obj/image_obj.yy",},"properties":[

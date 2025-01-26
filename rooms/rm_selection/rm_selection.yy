@@ -19,6 +19,7 @@
     {"name":"TitleLevel3","path":"rooms/rm_selection/rm_selection.yy",},
     {"name":"TitleLevel4","path":"rooms/rm_selection/rm_selection.yy",},
     {"name":"inst_1E3F1F0C","path":"rooms/rm_selection/rm_selection.yy",},
+    {"name":"inst_782D1DC3","path":"rooms/rm_selection/rm_selection.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -115,6 +116,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"text_string","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SKIBIDI GAME",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"text_obj","path":"objects/text_obj/text_obj.yy",},"propertyId":{"name":"text_color","path":"objects/text_obj/text_obj.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"$FF733638",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":432.75595,"scaleY":130.77051,"x":1455.6458,"y":320.0,},
+        {"$GMRInstance":"v1","%Name":"inst_782D1DC3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_782D1DC3","objectId":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":32.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InstanceBack","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_1E3F1F0C","colour":4279834905,"frozen":true,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1E3F1F0C","objectId":{"name":"image_obj","path":"objects/image_obj/image_obj.yy",},"properties":[
