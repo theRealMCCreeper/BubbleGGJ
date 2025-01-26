@@ -138,15 +138,16 @@ function touch_source(_source_type)
 		case ET.WATER:
 			switch(element)
 			{
-				case ET.NONE: change_element(ET.WATER);
-				case ET.FIRE: change_element(ET.NONE);
+				case ET.NONE: change_element(ET.WATER); break;
+				case ET.FIRE: change_element(ET.NONE); break;
 			}
 			break;
 			
 		case ET.FIRE:
 			switch(element)
 			{
-				case ET.NONE: change_element(ET.FIRE);
+				case ET.NONE: change_element(ET.FIRE); break;
+				case ET.WATER: change_element(ET.NONE); break;
 			}
 			break;
 	}
