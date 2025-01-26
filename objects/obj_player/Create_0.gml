@@ -20,6 +20,7 @@ water_grav_max = 25;
 fire_knock_back_h = 70;
 fire_knock_back_v = -50;
 fire_freeze_walk_time = game_get_speed(gamespeed_fps) * 0.25;
+fire_bubble_jump_force = -128;
 
 dir = 1;
 
@@ -122,7 +123,10 @@ function bubble_bouncing()
 	{
 		//vspd = bubble_jump_force;
 		//is_jump_variable = false;
-		jump(false, bubble_jump_force);
+		if(_bubble_inst.sprite_index = spr_bubble_fire)
+			jump(false, fire_bubble_jump_force);
+		else
+			jump(false, bubble_jump_force);
 		with(_bubble_inst)
 		{
 			pop();

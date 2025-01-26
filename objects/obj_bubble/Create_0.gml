@@ -97,6 +97,15 @@ function change_element(_element)
 			sprite_index = spr_bubble_water;
 			vspd = water_fall_speed;
 			break;
+			
+		case ET.FIRE:
+			sprite_index = spr_bubble_fire;
+			var hdir = 1
+			if(hspd != 0)
+				hdir = sign(hspd);
+	
+			hspd = initial_speed * hdir;
+			break;
 	}
 }
 
@@ -111,6 +120,13 @@ function touch_source(_source_type)
 			switch(element)
 			{
 				case ET.NONE: change_element(ET.WATER);
+			}
+			break;
+			
+		case ET.FIRE:
+			switch(element)
+			{
+				case ET.NONE: change_element(ET.FIRE);
 			}
 			break;
 	}

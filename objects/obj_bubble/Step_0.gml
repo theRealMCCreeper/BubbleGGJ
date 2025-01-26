@@ -32,6 +32,10 @@ if(_oil_source_inst != noone)
 //water
 if(place_meeting(x,y,obj_water_source))
 	touch_source(ET.WATER);
+else if(place_meeting(x,y,obj_fire_source))
+	touch_source(ET.FIRE);
+else
+	is_touching_source = false;
 	
 	
 
