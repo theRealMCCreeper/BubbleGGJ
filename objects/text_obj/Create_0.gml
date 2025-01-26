@@ -32,7 +32,7 @@ switch (text_halign)
 	break;
 	
 	case "bottom": // fa_bottom
-	valign_true = fa_right;
+	valign_true = fa_bottom;
 	break;
 }
 
@@ -40,6 +40,7 @@ switch (text_halign)
 if (text_fill_box && text_string != "")
 {
 	// Make the text fill the entire box
+	draw_set_font(text_font);
 	var _text_width = string_width(text_string);
 	var _text_height = string_height(text_string);
 	text_xscale = image_xscale / _text_width;

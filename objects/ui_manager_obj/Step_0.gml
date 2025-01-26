@@ -5,6 +5,21 @@ if (GET_KEYS[@KEY.T].pressed)
 	DEBUG_ACTIVE = !DEBUG_ACTIVE;
 }
 
+// Transition Timer Handling
+if (transition_timer > 0)
+{
+	transition_timer--;
+	transition_frame = 
+			(do_transition_in)
+			? floor(
+				transition_in_frames
+				* ((transition_in_length - transition_timer) / transition_in_length))
+			: floor(
+				transition_out_frames 
+				* ((transition_out_length - transition_timer) / transition_out_length));
+	if (transition_timer == 0 && transition_awaiting) menu_buttons.list[|menu_keyboard_target].on_click();
+}
+
 // Get all buttons and organize them to user's liking
 if (set_buttons_current < set_buttons_total)
 {
@@ -14,17 +29,36 @@ if (set_buttons_current < set_buttons_total)
 		// Get all buttons from the scene
 		var _current_room = asset_get_index(room_get_name(room));
 		var _instances = room_get_info(_current_room, false, true).instances;
-
+		
 		for (var _i = 0; _i < array_length(_instances); ++_i)
-		{	
-			if (_instances[_i].object_index == "text_button_obj" || 
-				_instances[_i].object_index == "image_button_obj")
+		{				
+			if (_instances[@_i].object_index == "text_button_obj" || 
+				_instances[@_i].object_index == "image_button_obj")
 			{
-				if (_instances[_i].id.button_number == noone || 
+				if (_instances[@_i].id.button_number == noone || 
 					menu_buttons.size == 0)
 				{
 					// button order wasn't set, so place it at end
-					ds_list_add(menu_buttons.list, _instances[_i].id);
+					ds_list_add(menu_buttons.list, _instances[@_i].id);
+					menu_buttons.size++;
+				}
+				else if (menu_buttons.size == 1)
+				{
+					// Singular value
+					if (_instances[@_i].id.button_number > menu_buttons.list[|0].id.button_number)
+					{
+						ds_list_add(menu_buttons.list, _instances[@_i].id);
+						menu_buttons.size++;
+					}
+					else
+					{
+						ds_list_insert(menu_buttons.list, 0, _instances[@_i].id);
+						menu_buttons.size++;
+					}
+				}
+				else if (_instances[@_i].id.button_number == 0 && menu_buttons.list[|0].id.button_number != 0)
+				{
+					ds_list_insert(menu_buttons.list, 0, _instances[@_i].id);
 					menu_buttons.size++;
 				}
 				else
@@ -35,26 +69,26 @@ if (set_buttons_current < set_buttons_total)
 						if (menu_buttons.list[|_j].id.button_number == noone)
 						{
 							// Add to end of all sortable items when encountering unsorted
-							ds_list_insert(menu_buttons.list, _j, _instances[_i].id);
+							ds_list_insert(menu_buttons.list, _j, _instances[@_i].id);
 							menu_buttons.size++;
 							break;
 						}
 						else if (_j + 1 == menu_buttons.size)
 						{
 							// Add to end of list
-							ds_list_add(menu_buttons.list, _instances[_i].id);
+							ds_list_add(menu_buttons.list, _instances[@_i].id);
 							menu_buttons.size++;
 							break;
 						}
 						else
 						{
 							// Add inbetween other buttons
-							if (_instances[_i].id.button_number
+							if (_instances[@_i].id.button_number
 								> menu_buttons.list[|_j].id.button_number &&
-								_instances[_i].id.button_number
+								_instances[@_i].id.button_number
 								< menu_buttons.list[|_j + 1].id.button_number)
 							{
-								ds_list_insert(menu_buttons.list, _j, _instances[_i].id);
+								ds_list_insert(menu_buttons.list, _j + 1, _instances[_i].id);
 								menu_buttons.size++;
 								break;
 							}
@@ -66,10 +100,10 @@ if (set_buttons_current < set_buttons_total)
 	}
 }
 else
-{		
+{	
 	// Only allow menu actions if the game is paused
 	// Note: title sceens count as paused!
-	if (!is_paused) exit;
+	if (!is_paused || lock_inputs) exit;
 
 	// Check to see if the mouse is currently in contact with any buttons
 	menu_mouse_target = noone;
@@ -107,6 +141,8 @@ else
 		}
 	}
 	
+	
+	
 	if (menu_mouse_target != noone)
 	{
 		// Set the keyboard variant to the button selected by the mouse
@@ -115,7 +151,7 @@ else
 		// Click the selected button
 		if (GET_KEYS[@KEY.L_MOUSE].pressed || GET_KEYS[@KEY.SPACE].pressed)
 		{
-			menu_buttons.list[|menu_mouse_target].on_click();
+			menu_buttons.list[|menu_keyboard_target].on_click();
 		}
 	}
 	else
@@ -140,7 +176,7 @@ else
 		if (GET_KEYS[@KEY.LEFT].pressed)
 		{
 			// Play a sound effect
-			general("reminder to put sound for menu keyboard down");
+			print("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_left != noone)
@@ -153,7 +189,7 @@ else
 		if (GET_KEYS[@KEY.UP].pressed)
 		{
 			// Play a sound effect
-			general("reminder to put sound for menu keyboard up");
+			print("reminder to put sound for menu keyboard up");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_up != noone)
@@ -166,7 +202,7 @@ else
 		if (GET_KEYS[@KEY.RIGHT].pressed)
 		{
 			// Play a sound effect
-			general("reminder to put sound for menu keyboard down");
+			print("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_right != noone)
@@ -179,7 +215,7 @@ else
 		if (GET_KEYS[@KEY.DOWN].pressed)
 		{
 			// Play a sound effect
-			general("reminder to put sound for menu keyboard down");
+			print("reminder to put sound for menu keyboard down");
 			
 			// Go to designated key
 			if (menu_buttons.list[|menu_keyboard_target].button_down != noone)
@@ -192,4 +228,3 @@ else
 		if (GET_KEYS[@KEY.SPACE].pressed) menu_buttons.list[|menu_keyboard_target].on_click();
 	}
 }
-

@@ -40,6 +40,17 @@ menu_mouse_target = noone;
 set_buttons_current = 0;
 set_buttons_total = 5;
 
+// Visuals
+do_transition_in = true;
+transition_timer = transition_in_length;
+transition_frame = 0;
+transition_in_frames = sprite_get_info(transition_in).num_subimages;
+transition_out_frames = sprite_get_info(transition_out).num_subimages;
+
+// Prevent further inputs during transition out
+lock_inputs = false;
+transition_awaiting = false;
+
 // Depth should be above everything
 depth = -10;
 #endregion

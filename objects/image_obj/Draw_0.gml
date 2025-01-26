@@ -2,9 +2,8 @@
 
 // Draws the specified sprite
 draw_sprite_ext(
-		sprite_index, image_index, 
-		x + xoffset, y + yoffset, 
-		image_xscaling, image_yscaling,
+		sprite_index, image_frame_true, 
+		x, y, image_xscaling, image_yscaling,
 		image_rotation, image_color_true, image_alpha);
 
 // Inherit from 'ui_content_obj'
