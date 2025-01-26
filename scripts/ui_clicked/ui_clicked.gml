@@ -54,7 +54,7 @@ function ui_clicked(_id_button)
 		case "debug_start":
 		if (UI_MANAGER.transition_awaiting)
 		{
-			room_goto(rm_level1);
+			room_goto(rm_level1q);
 		}
 		else
 		{
