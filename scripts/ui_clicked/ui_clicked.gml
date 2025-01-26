@@ -2,10 +2,7 @@
 
 // Handles all kinds of ui button's code on being clicked
 function ui_clicked(_id_button)
-{
-	// Play a sound effect
-	show_debug_message("reminder to put sound for menu mouse clicking a button IN text_button_obj");
-	
+{	
 	// Runs code for whatever action should occur
 	switch (_id_button.click_action)
 	{
@@ -187,6 +184,10 @@ function ui_clicked(_id_button)
 			UI_MANAGER.transition_awaiting = true;
 			UI_MANAGER.lock_inputs = true;
 		}
+		break;
+		
+		case "pause_game":
+		UI_MANAGER.is_paused = !UI_MANAGER.is_paused;
 		break;
 		
 		case "game_end":

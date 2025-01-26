@@ -18,6 +18,7 @@ enum KEY
 	D,
 	Z,
 	ENTER,
+	ESCAPE,
 	T, // DEBUG TOGGLE
 	LENGTH // NOT A KEY
 }
@@ -67,6 +68,7 @@ for (var _i = 0; _i < KEY.LENGTH; ++_i)
 		case KEY.D: GET_KEYS[@_i].check = ord("D"); break;
 		case KEY.Z: GET_KEYS[@_i].check = ord("Z"); break;
 		case KEY.ENTER: GET_KEYS[@_i].check = vk_enter; break;
+		case KEY.ESCAPE: GET_KEYS[@_i].check = vk_escape; break;
 		case KEY.T: GET_KEYS[@_i].check = ord("T"); break;
 	}
 }
