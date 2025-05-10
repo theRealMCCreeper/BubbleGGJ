@@ -1,5 +1,8 @@
 // IMAGE DRAW
 
+// Prevent drawing while game is active
+if (!UI_MANAGER.is_paused && paused_only) exit;
+
 // Draws the specified sprite
 draw_sprite_ext(
 		sprite_index, image_frame_true, 

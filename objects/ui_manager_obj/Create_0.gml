@@ -47,6 +47,28 @@ transition_frame = 0;
 transition_in_frames = sprite_get_info(transition_in).num_subimages;
 transition_out_frames = sprite_get_info(transition_out).num_subimages;
 
+// Should match size of view
+if (view_enabled)
+{
+	print(camera_get_view_width(view_camera[0]));
+	
+	transition_in_xscale = camera_get_view_width(view_camera[0]) / sprite_get_width(transition_in);
+	transition_in_yscale = camera_get_view_height(view_camera[0]) / sprite_get_height(transition_in);
+	
+	transition_out_xscale = camera_get_view_width(view_camera[0]) / sprite_get_width(transition_out);
+	transition_out_yscale = camera_get_view_height(view_camera[0]) / sprite_get_height(transition_out);
+}
+else
+{
+	transition_in_xscale = 1;
+	transition_in_yscale = 1;
+	transition_out_xscale = 1;
+	transition_out_yscale = 1;
+}
+
+// Pressing Escape
+click_action = escape_press_run;
+
 // Prevent further inputs during transition out
 lock_inputs = false;
 transition_awaiting = false;

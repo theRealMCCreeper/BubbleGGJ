@@ -1,5 +1,8 @@
 // TEXT DRAW
 
+// Prevent drawing while game is active
+if (!UI_MANAGER.is_paused && paused_only) exit;
+
 // Draw Outline to the Background
 if (do_outline)
 {
