@@ -60,6 +60,7 @@
     {"name":"spr_oil_source_empty","order":1,"path":"sprites/spr_oil_source_empty/spr_oil_source_empty.yy",},
     {"name":"spr_water_source_bottom","order":3,"path":"sprites/spr_water_source_bottom/spr_water_source_bottom.yy",},
     {"name":"spr_water_source","order":2,"path":"sprites/spr_water_source/spr_water_source.yy",},
+    {"name":"Sprite69","order":1,"path":"sprites/Sprite69/Sprite69.yy",},
     {"name":"title_level_spr","order":25,"path":"sprites/title_level_spr/title_level_spr.yy",},
   ],
 }

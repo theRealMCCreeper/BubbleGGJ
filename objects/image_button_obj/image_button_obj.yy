@@ -31,25 +31,25 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"image_color_hover","filters":[],"listItems":[],"multiselect":false,"name":"image_color_hover","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFFFFFFF","varType":7,},
-    {"$GMObjectProperty":"v1","%Name":"click_action","filters":[],"listItems":[],"multiselect":false,"name":"click_action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"button_move_sound","filters":[
+    {"$GMObjectProperty":"v2","%Name":"image_color_hover","filters":[],"listItems":[],"multiselect":false,"name":"image_color_hover","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"$FFFFFFFF","varType":7,},
+    {"$GMObjectProperty":"v2","%Name":"click_action","filters":[],"listItems":[],"multiselect":false,"name":"click_action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"button_move_sound","filters":[
         "GMSound",
       ],"listItems":[],"multiselect":false,"name":"button_move_sound","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"button_click_snd","path":"sounds/button_click_snd/button_click_snd.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"button_click_snd","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"button_click_sound","filters":[
+    {"$GMObjectProperty":"v2","%Name":"button_click_sound","filters":[
         "GMSound",
       ],"listItems":[],"multiselect":false,"name":"button_click_sound","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"button_move_snd","path":"sounds/button_move_snd/button_move_snd.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"button_move_snd","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"button_number","filters":[],"listItems":[],"multiselect":false,"name":"button_number","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"button_left","filters":[
+    {"$GMObjectProperty":"v2","%Name":"button_number","filters":[],"listItems":[],"multiselect":false,"name":"button_number","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"button_left","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"button_left","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"button_up","filters":[
+    {"$GMObjectProperty":"v2","%Name":"button_up","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"button_up","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"button_right","filters":[
+    {"$GMObjectProperty":"v2","%Name":"button_right","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"button_right","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"button_down","filters":[
+    {"$GMObjectProperty":"v2","%Name":"button_down","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"button_down","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-4","varType":1,},
   ],

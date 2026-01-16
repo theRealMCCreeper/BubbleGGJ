@@ -28,18 +28,18 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"is_paused","filters":[],"listItems":[],"multiselect":false,"name":"is_paused","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-    {"$GMObjectProperty":"v1","%Name":"transition_in","filters":[
+    {"$GMObjectProperty":"v2","%Name":"is_paused","filters":[],"listItems":[],"multiselect":false,"name":"is_paused","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"transition_in","filters":[
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"transition_in","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"empty_spr","path":"sprites/empty_spr/empty_spr.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"empty_spr","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"transition_out","filters":[
+    {"$GMObjectProperty":"v2","%Name":"transition_out","filters":[
         "GMSprite",
       ],"listItems":[],"multiselect":false,"name":"transition_out","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"empty_spr","path":"sprites/empty_spr/empty_spr.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"empty_spr","varType":5,},
-    {"$GMObjectProperty":"v1","%Name":"transition_in_length","filters":[],"listItems":[],"multiselect":false,"name":"transition_in_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"transition_out_length","filters":[],"listItems":[],"multiselect":false,"name":"transition_out_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"escape_press_run","filters":[],"listItems":[],"multiselect":false,"name":"escape_press_run","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"sprite_transition_in_length","filters":[],"listItems":[],"multiselect":false,"name":"sprite_transition_in_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"sprite_transition_out_length","filters":[],"listItems":[],"multiselect":false,"name":"sprite_transition_out_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"transition_in_length","filters":[],"listItems":[],"multiselect":false,"name":"transition_in_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"transition_out_length","filters":[],"listItems":[],"multiselect":false,"name":"transition_out_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"escape_press_run","filters":[],"listItems":[],"multiselect":false,"name":"escape_press_run","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"sprite_transition_in_length","filters":[],"listItems":[],"multiselect":false,"name":"sprite_transition_in_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"sprite_transition_out_length","filters":[],"listItems":[],"multiselect":false,"name":"sprite_transition_out_length","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
