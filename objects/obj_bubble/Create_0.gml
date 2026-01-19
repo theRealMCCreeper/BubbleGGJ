@@ -179,6 +179,12 @@ function wall_bubble_collisions()
 	{
 		pop();
 	}
+	
+	//flip door collision
+	var _door_inst = instance_place(x+hspd, y, obj_door)
+	if(_door_inst != noone && _door_inst.is_open == false)
+		pop();
+	
 	//bubble
 	var _bubble_inst = instance_place(x+hspd,y,obj_bubble);
 	if(_bubble_inst != noone)

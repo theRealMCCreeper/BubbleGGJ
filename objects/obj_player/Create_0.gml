@@ -79,22 +79,37 @@ function change_state(new_state)
 function move_with_collisions()
 {
 	//horizontal
-	if(place_meeting(x+hspd, y, collision_tile_layer) || place_meeting(x+hspd, y, obj_fence_parent))
+	if(collision_at(x+hspd, y))
 	{
-		while(!place_meeting(x+sign(hspd),y,collision_tile_layer) && !place_meeting(x+sign(hspd), y, obj_fence_parent))
+		while(!collision_at(x+sign(hspd),y))
 			x += sign(hspd);
 		hspd = 0;
 	}
 	x += hspd;
 	
 	//vertical
-	if(place_meeting(x,y+vspd,collision_tile_layer) || place_meeting(x,y+vspd,obj_fence_parent))
+	if(collision_at(x,y+vspd))
 	{
-		while(!place_meeting(x,y+sign(vspd),collision_tile_layer) && !place_meeting(x,y+sign(vspd),obj_fence_parent))
+		while(!collision_at(x,y+sign(vspd)))
 			y += sign(vspd);
 		vspd = 0;
 	}
 	y += vspd;
+}
+
+//Returns bool if there is a collision at that location
+function collision_at(_x, _y) 
+{
+	if(place_meeting(_x, _y, collision_tile_layer) || place_meeting(_x, _y, obj_fence_parent))
+		return true;
+		
+	var _inst = instance_place(_x, _y, obj_door)
+	if(_inst != noone && _inst.is_open == false)
+	{
+		return true;
+	}
+	
+	return false;
 }
 
 function shooting()
