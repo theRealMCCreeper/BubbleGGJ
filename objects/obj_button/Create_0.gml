@@ -13,7 +13,8 @@ function press()
 	image_index = 0;
 	
 	if(instance_exists(obj_door))
-		obj_door.toggle_state();
+		with(obj_door)
+			toggle_state();
 	
 	return true;
 }

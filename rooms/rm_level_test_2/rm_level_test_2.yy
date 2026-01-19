@@ -30,6 +30,7 @@
     {"name":"inst_51D66A9C","path":"rooms/rm_level_test_2/rm_level_test_2.yy",},
     {"name":"inst_52E5F44A","path":"rooms/rm_level_test_2/rm_level_test_2.yy",},
     {"name":"inst_1A2645D0","path":"rooms/rm_level_test_2/rm_level_test_2.yy",},
+    {"name":"inst_5AEAABD3","path":"rooms/rm_level_test_2/rm_level_test_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -67,6 +68,9 @@
         {"$GMRInstance":"v4","%Name":"inst_1A2645D0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A2645D0","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"is_on","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"true",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":-1.0,"scaleY":1.0,"x":2500.0,"y":2500.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5AEAABD3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5AEAABD3","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"propertyId":{"name":"is_open","path":"objects/obj_door/obj_door.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5000.0,"y":3000.0,},
       ],"layers":[],"name":"Scene","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Control","depth":500,"effectEnabled":true,"effectType":null,"gridX":500,"gridY":500,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_5CE0C816_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5CE0C816_1","objectId":{"name":"obj_fullscreen","path":"objects/obj_fullscreen/obj_fullscreen.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":192.0,},
