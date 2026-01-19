@@ -162,7 +162,8 @@ function jump(_is_jump_variable, _force)
 function update_grounded()
 {
 	//grounded = place_meeting(x,y+1,collision_tile_layer);
-	set_grounded(place_meeting(x,y+1,collision_tile_layer) || place_meeting(x,y+1,obj_fence_parent));
+	//set_grounded(place_meeting(x,y+1,collision_tile_layer) || place_meeting(x,y+1,obj_fence_parent));
+	set_grounded(collision_at(x,y+1));
 }
 
 function set_grounded(new_grounded)
